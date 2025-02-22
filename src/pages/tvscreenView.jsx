@@ -158,26 +158,22 @@ function TvScreen() {
   }, []);
 
   const getFormattedDateParts = (date) => {
-    const options = {
+    const formatter = new Intl.DateTimeFormat("en-GB", {
       weekday: "long",
       day: "2-digit",
-      month: "short",
+      month: "long",
       year: "numeric",
-    };
+    });
 
-    const day = date.toLocaleDateString("en-GB", { weekday: "long" });
-    const dayOfMonth = date.toLocaleDateString("en-GB", { day: "2-digit" });
-    const month = date
-      .toLocaleDateString("en-GB", { month: "short" })
-      .toUpperCase();
-    const year = date.toLocaleDateString("en-GB", { year: "numeric" });
+    const parts = formatter.formatToParts(date);
+    const day = parts.find((p) => p.type === "weekday")?.value || "";
+    const dayOfMonth = parts.find((p) => p.type === "day")?.value || "";
+    const month = (
+      parts.find((p) => p.type === "month")?.value || ""
+    ).toUpperCase();
+    const year = parts.find((p) => p.type === "year")?.value || "";
 
-    return {
-      day,
-      date: dayOfMonth,
-      month,
-      year,
-    };
+    return { day, date: dayOfMonth, month, year };
   };
 
   const getFormattedTimeWithoutSeconds = (date) => {

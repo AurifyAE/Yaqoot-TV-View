@@ -23,6 +23,15 @@ const SpotRate = () => {
     return "white"; // Default color for no change
   };
 
+  const getBorderColor = (change) => {
+    if (change === "up") {
+      return "3px solid green"; // Green color for increase
+    } else if (change === "down") {
+      return "3px solid red"; // Red color for decrease
+    }
+    return "3px solid rgb(255, 255, 255)"; // Default color for no change
+  };
+
   const renderSpotSection = (metal, data) => (
     <Box
       sx={{
@@ -46,14 +55,19 @@ const SpotRate = () => {
       >
         <Box className="flex flex-col items-center">
           <Typography
-            sx={{ color: "#FFFFFF", fontSize: "2.1vw", fontWeight: "600" }}
+            sx={{
+              color: "#FFFFFF",
+              fontSize: metal === "gold" ? "2.2vw" : "1.6vw",
+              fontWeight: metal === "gold" ? "800" : "600",
+            }}
           >
             {metal.toUpperCase()}
           </Typography>
           <Typography
             sx={{
               color: "#FFFFFF",
-              fontSize: "1.6vw",
+              fontSize: metal === "gold" ? "2.2vw" : "1.6vw",
+              fontWeight: metal === "gold" ? "800" : "600",
               marginTop: "-10px",
             }}
           >
@@ -74,7 +88,7 @@ const SpotRate = () => {
               margin: "1vw 0",
               color: getColor(data.bidChanged),
               backgroundColor: getBackgroundColor(data.bidChanged),
-              border: "3px solid #FFFFFF",
+              border: getBorderColor(data.bidChanged),
               width: "10vw",
             }}
           >
@@ -116,7 +130,7 @@ const SpotRate = () => {
               margin: "1vw 0",
               color: getColor(data.askChanged),
               backgroundColor: getBackgroundColor(data.bidChanged),
-              border: "3px solid #FFFFFF",
+              border: getBorderColor(data.bidChanged),
               width: "10vw",
             }}
           >

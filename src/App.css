@@ -1,9 +1,12 @@
 body {
-  background-color: #3A0353;
+  background-color: #2d0341;
   /* background-image: url(/background2.jpg); */
   background-size: cover;
   height: 100vh;
 }
+
+/* #3a053a */
+/* #2d0341 */
 
 #root {
   margin: 0 auto;

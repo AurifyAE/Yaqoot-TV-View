@@ -192,24 +192,24 @@ const CommodityTable = ({ commodities }) => {
                       borderBottom: "none",
                     },
                     "&:nth-of-type(odd)": {
-                      backgroundColor: "#4b026c",
+                      backgroundColor: "#d42aa2",
                       "& td": {
-                        borderLeft: "4px solid #4b026c",
-                        borderRight: "4px solid #4b026c",
+                        borderLeft: "4px solid #d42aa2",
+                        borderRight: "4px solid #d42aa2",
                       },
                     },
                     "&:nth-of-type(even)": {
-                      backgroundColor: "#590380",
+                      backgroundColor: "#9d367f",
                       "& td": {
-                        borderLeft: "4px solid #590380",
-                        borderRight: "4px solid #590380",
+                        borderLeft: "4px solid #9d367f",
+                        borderRight: "4px solid #9d367f",
                       },
                     },
                   }}
                 >
                   <TableCell
                     sx={{
-                      color: "white",
+                      color: "#FFFFFF",
                       fontSize: "2vw",
                       fontWeight: "bold",
                       textAlign: "right",
@@ -219,7 +219,7 @@ const CommodityTable = ({ commodities }) => {
                   </TableCell>
                   <TableCell
                     sx={{
-                      color: "white",
+                      color: "#FFFFFF",
                       fontSize: "1.4vw",
                       textAlign: "left",
                       paddingLeft: "0px",
@@ -232,7 +232,7 @@ const CommodityTable = ({ commodities }) => {
                   </TableCell>
                   <TableCell
                     sx={{
-                      color: "white",
+                      color: "#FFFFFF",
                       fontSize: "2vw",
                       fontWeight: "bold",
                       textAlign: "center",
@@ -242,7 +242,7 @@ const CommodityTable = ({ commodities }) => {
                   </TableCell>
                   <TableCell
                     sx={{
-                      color: "white",
+                      color: "#FFFFFF",
                       fontSize: "2vw",
                       fontWeight: "bold",
                       textAlign: "center",
@@ -252,7 +252,7 @@ const CommodityTable = ({ commodities }) => {
                   </TableCell>
                   <TableCell
                     sx={{
-                      color: "white",
+                      color: "#FFFFFF",
                       fontSize: "2vw",
                       fontWeight: "bold",
                       textAlign: "center",

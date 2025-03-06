@@ -83,13 +83,13 @@ const SpotRate = () => {
               alignItems: "center",
               padding: "6px",
               borderRadius: "8px",
-              fontSize: "2vw",
+              fontSize: metal === "gold" ? "2.5vw" : "1.8vw",
               fontWeight: "bold",
               margin: "1vw 0",
               color: getColor(data.bidChanged),
               backgroundColor: getBackgroundColor(data.bidChanged),
               border: getBorderColor(data.bidChanged),
-              width: "10vw",
+              width: "11vw",
             }}
           >
             {data.bid}
@@ -106,7 +106,7 @@ const SpotRate = () => {
             <Typography
               variant="body2"
               sx={{
-                fontSize: "1.3vw",
+                fontSize: metal === "gold" ? "1.3vw" : "1vw",
                 color: "white",
                 fontWeight: "bold",
                 marginLeft: "0.5vw",
@@ -125,13 +125,13 @@ const SpotRate = () => {
               alignItems: "center",
               padding: "6px",
               borderRadius: "8px",
-              fontSize: "2vw",
+              fontSize: metal === "gold" ? "2.5vw" : "1.8vw",
               fontWeight: "bold",
               margin: "1vw 0",
               color: getColor(data.askChanged),
               backgroundColor: getBackgroundColor(data.bidChanged),
               border: getBorderColor(data.bidChanged),
-              width: "10vw",
+              width: "11vw",
             }}
           >
             {data.ask}
@@ -148,7 +148,7 @@ const SpotRate = () => {
             <Typography
               variant="body2"
               sx={{
-                fontSize: "1.3vw",
+                fontSize: metal === "gold" ? "1.3vw" : "1vw",
                 color: "white",
                 fontWeight: "bold",
                 marginLeft: "0.5vw",
